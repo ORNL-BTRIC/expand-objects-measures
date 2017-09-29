@@ -1,0 +1,128 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>hvac_template_zone_vav_heat_and_cool</name>
+  <uid>f4a73e58-1bae-4a1e-8042-caa86302dea9</uid>
+  <version_id>934f9dd9-6d71-4455-99dc-7157b2b627f0</version_id>
+  <version_modified>20170928T195134Z</version_modified>
+  <xml_checksum>5E2576E4</xml_checksum>
+  <class_name>HVACTemplateZoneVAVHeatAndCool</class_name>
+  <display_name>HVACTemplate:Zone:VAV:HeatAndCool</display_name>
+  <description>Create HVACTemplate:Zone:VAV:HeatAndCool</description>
+  <modeler_description></modeler_description>
+  <arguments>
+    <argument>
+      <name>zones</name>
+      <display_name>Choose Thermal Zones to have VAV boxes.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>*All Thermal Zones*</default_value>
+      <choices>
+        <choice>
+          <value>{56a46b2f-d6a4-4431-8ff2-326a827155ea}</value>
+          <display_name>*All Thermal Zones*</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>system</name>
+      <display_name>Choose an Air Loop for zone VAV systems.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+    </argument>
+    <argument>
+      <name>system_sch</name>
+      <display_name>Choose System Availability Schedule.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>*Always On*</default_value>
+      <choices>
+        <choice>
+          <value>{00000000-0000-0000-0000-000000000000}</value>
+          <display_name>*Always On*</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>reheat_type</name>
+      <display_name>Choose reheat type.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>None</default_value>
+      <choices>
+        <choice>
+          <value>None</value>
+          <display_name>None</display_name>
+        </choice>
+        <choice>
+          <value>HotWater</value>
+          <display_name>HotWater</display_name>
+        </choice>
+        <choice>
+          <value>Electric</value>
+          <display_name>Electric</display_name>
+        </choice>
+      </choices>
+    </argument>
+  </arguments>
+  <outputs/>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Whole System</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>Model Articulation</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>hvac_template_zone_vav_heat_and_cool_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>831C1329</checksum>
+    </file>
+    <file>
+      <filename>example_model.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>53D14E69</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>2.2.0</identifier>
+        <min_compatible>2.2.0</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>567E69CE</checksum>
+    </file>
+  </files>
+</measure>

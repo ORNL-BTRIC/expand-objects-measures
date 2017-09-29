@@ -1,0 +1,142 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>hvac_template_zone_vav_fan_powered</name>
+  <uid>38bb6776-b013-493e-9bc0-eda7de6d0391</uid>
+  <version_id>8d7745c0-bbce-4728-974f-e45ca6e2e3ac</version_id>
+  <version_modified>20170928T195134Z</version_modified>
+  <xml_checksum>5E2576E4</xml_checksum>
+  <class_name>HVACTemplateZoneVAVFanPowered</class_name>
+  <display_name>HVACTemplate:Zone:VAV:FanPowered</display_name>
+  <description>Create HVACTemplate:Zone:VAV:FanPowered</description>
+  <modeler_description></modeler_description>
+  <arguments>
+    <argument>
+      <name>zones</name>
+      <display_name>Choose Thermal Zones to have VAV boxes.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>*All Thermal Zones*</default_value>
+      <choices>
+        <choice>
+          <value>{dbd0dfd9-39b7-4c5f-be55-6b9375180564}</value>
+          <display_name>*All Thermal Zones*</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>system</name>
+      <display_name>Choose an Air Loop for zone VAV systems.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+    </argument>
+    <argument>
+      <name>system_sch</name>
+      <display_name>Choose System Availability Schedule.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>*Always On*</default_value>
+      <choices>
+        <choice>
+          <value>{00000000-0000-0000-0000-000000000000}</value>
+          <display_name>*Always On*</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>flow_type</name>
+      <display_name>Choose flow type.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>Parallel</default_value>
+      <choices>
+        <choice>
+          <value>Parallel</value>
+          <display_name>Parallel</display_name>
+        </choice>
+        <choice>
+          <value>Series</value>
+          <display_name>Series</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>reheat_type</name>
+      <display_name>Choose reheat type.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>Electric</default_value>
+      <choices>
+        <choice>
+          <value>HotWater</value>
+          <display_name>HotWater</display_name>
+        </choice>
+        <choice>
+          <value>Electric</value>
+          <display_name>Electric</display_name>
+        </choice>
+      </choices>
+    </argument>
+  </arguments>
+  <outputs/>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Whole System</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>Model Articulation</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>hvac_template_zone_vav_fan_powered_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>CAC9D12C</checksum>
+    </file>
+    <file>
+      <filename>example_model.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>53D14E69</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>2.2.0</identifier>
+        <min_compatible>2.2.0</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>D30539F8</checksum>
+    </file>
+  </files>
+</measure>

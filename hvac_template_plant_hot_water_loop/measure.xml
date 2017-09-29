@@ -1,0 +1,123 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>hvac_template_plant_hot_water_loop</name>
+  <uid>0866d867-e002-4b8d-9c84-27d4372a4b90</uid>
+  <version_id>c5928606-b414-42e1-9fb7-fbf73e7e107c</version_id>
+  <version_modified>20170926T141413Z</version_modified>
+  <xml_checksum>ED947A2B</xml_checksum>
+  <class_name>HVACTemplatePlantHotWaterLoop</class_name>
+  <display_name>HVACTemplate:Plant:HotWaterLoop</display_name>
+  <description>Create Hot Water Loop</description>
+  <modeler_description></modeler_description>
+  <arguments>
+    <argument>
+      <name>hw_pump_control</name>
+      <display_name>Choose HW pump control type.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>intermittent</default_value>
+      <choices>
+        <choice>
+          <value>intermittent</value>
+          <display_name>intermittent</display_name>
+        </choice>
+        <choice>
+          <value>continuous</value>
+          <display_name>continuous</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>hw_design_setpoint</name>
+      <display_name>Hot water design setpoint in Fahrenheit</display_name>
+      <type>Double</type>
+      <required>false</required>
+      <model_dependent>false</model_dependent>
+      <default_value>179.6</default_value>
+    </argument>
+    <argument>
+      <name>hw_pump_type</name>
+      <display_name>Choose HW pump type.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>ConstantFlow</default_value>
+      <choices>
+        <choice>
+          <value>ConstantFlow</value>
+          <display_name>ConstantFlow</display_name>
+        </choice>
+        <choice>
+          <value>VariableFlow</value>
+          <display_name>VariableFlow</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>hw_design_deltaT</name>
+      <display_name>Hot water design deltaT in Fahrenheit</display_name>
+      <type>Double</type>
+      <required>false</required>
+      <model_dependent>false</model_dependent>
+      <default_value>19.8</default_value>
+    </argument>
+  </arguments>
+  <outputs/>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Distribution</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>Model Articulation</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>hvac_template_plant_hot_water_loop_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>58979441</checksum>
+    </file>
+    <file>
+      <filename>example_model.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>53D14E69</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>2.2.0</identifier>
+        <min_compatible>2.2.0</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>3C5C3D11</checksum>
+    </file>
+  </files>
+</measure>
