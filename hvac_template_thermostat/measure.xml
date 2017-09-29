@@ -1,0 +1,131 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>hvac_template_thermostat</name>
+  <uid>176f3760-5a50-495b-b4dd-57e4e043f88c</uid>
+  <version_id>6fb774b1-7bd4-409b-9cc9-cb74afefb225</version_id>
+  <version_modified>20170928T180843Z</version_modified>
+  <xml_checksum>D3920775</xml_checksum>
+  <class_name>HVACTemplateThermostat</class_name>
+  <display_name>HVACTemplate:Thermostat</display_name>
+  <description>Assign cooling and heating setpoint temperature schedule to thermal zones.</description>
+  <modeler_description>Assign cooling and heating setpoint temperature schedule to thermal zones. Use existing cooling and heating schedule, or generate ones from constant heating and cooling setpoint temperature.</modeler_description>
+  <arguments>
+    <argument>
+      <name>zones</name>
+      <display_name>Choose Thermal Zones to add/change thermostat schedules on.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>*All Thermal Zones*</default_value>
+      <choices>
+        <choice>
+          <value>{34c25b5e-f86d-4bdc-91f5-c494e16ff594}</value>
+          <display_name>*All Thermal Zones*</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>cooling_sch</name>
+      <display_name>Choose Cooling Schedule.</display_name>
+      <type>Choice</type>
+      <required>false</required>
+      <model_dependent>false</model_dependent>
+      <default_value>Not Used</default_value>
+      <choices>
+        <choice>
+          <value>{00000000-0000-0000-0000-000000000000}</value>
+          <display_name>Not Used</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>cooling_temp</name>
+      <display_name>Or define constant cooling setpoint temperature (F).</display_name>
+      <description>This value will only be used when cooling schedule was not selected (Not Used)</description>
+      <type>Double</type>
+      <required>false</required>
+      <model_dependent>false</model_dependent>
+      <default_value>75</default_value>
+    </argument>
+    <argument>
+      <name>heating_sch</name>
+      <display_name>Choose Heating Schedule.</display_name>
+      <type>Choice</type>
+      <required>false</required>
+      <model_dependent>false</model_dependent>
+      <default_value>Not Used</default_value>
+      <choices>
+        <choice>
+          <value>{00000000-0000-0000-0000-000000000000}</value>
+          <display_name>Not Used</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>heating_temp</name>
+      <display_name>Or define constant heating setpoint temperature (F).</display_name>
+      <description>This value will only be used when heating schedule was not selected (Not Used)</description>
+      <type>Double</type>
+      <required>false</required>
+      <model_dependent>false</model_dependent>
+      <default_value>70</default_value>
+    </argument>
+  </arguments>
+  <outputs/>
+  <provenances/>
+  <tags>
+    <tag>HVAC.HVAC Controls</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>Model Articulation</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>hvac_template_thermostat_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>38204F9D</checksum>
+    </file>
+    <file>
+      <filename>example_model.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>53D14E69</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>2.2.0</identifier>
+        <min_compatible>2.2.0</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>A8FEFA32</checksum>
+    </file>
+  </files>
+</measure>

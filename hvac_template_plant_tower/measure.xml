@@ -1,0 +1,89 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>hvac_template_plant_tower</name>
+  <uid>2471403c-ac3f-4210-8a5a-5c1128463184</uid>
+  <version_id>7193d0d0-05b3-4c51-8dd3-220ccc99d4d7</version_id>
+  <version_modified>20170928T171708Z</version_modified>
+  <xml_checksum>F27B6ED6</xml_checksum>
+  <class_name>HVACTemplatePlantTower</class_name>
+  <display_name>HVACTemplate:Plant:Tower</display_name>
+  <description>Creat cooling tower</description>
+  <modeler_description></modeler_description>
+  <arguments>
+    <argument>
+      <name>cooling_tower_type</name>
+      <display_name>Choose cooling tower type.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>SingleSpeed</default_value>
+      <choices>
+        <choice>
+          <value>SingleSpeed</value>
+          <display_name>SingleSpeed</display_name>
+        </choice>
+        <choice>
+          <value>TwoSpeed</value>
+          <display_name>TwoSpeed</display_name>
+        </choice>
+      </choices>
+    </argument>
+  </arguments>
+  <outputs/>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Heat Rejection</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>Model Articulation</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>hvac_template_plant_tower_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>FA666E66</checksum>
+    </file>
+    <file>
+      <filename>example_model.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>53D14E69</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>2.2.0</identifier>
+        <min_compatible>2.2.0</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>0FCEEB2C</checksum>
+    </file>
+  </files>
+</measure>

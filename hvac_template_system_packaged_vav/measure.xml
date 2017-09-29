@@ -1,0 +1,317 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>hvac_template_system_packaged_vav</name>
+  <uid>15cbd051-f918-4b4c-b101-ca743a52b6a1</uid>
+  <version_id>f03edc89-f94a-4f1f-81dc-e986f1fbfd61</version_id>
+  <version_modified>20170928T184355Z</version_modified>
+  <xml_checksum>5E2576E4</xml_checksum>
+  <class_name>HVACTemplateSystemPackagedVAV</class_name>
+  <display_name>HVACTemplate:System:PackagedVAV</display_name>
+  <description>OS Version of HVACTemplate:System:PackagedVAV</description>
+  <modeler_description>OS Version of HVACTemplate:System:PackagedVAV. Input values in this measure will generate Packaged VAV system. Another template measure HVACTemplate:Zone:VAV, or HVACTemplate:Zone:VAV:FanPowered, or HVACTemplate:Zone:VAV:HeatAndCool should be applied after applying this measure. </modeler_description>
+  <arguments>
+    <argument>
+      <name>system_name</name>
+      <display_name>New system name</display_name>
+      <description>This name will be used as the name of the new system.</description>
+      <type>String</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+    </argument>
+    <argument>
+      <name>system_sch</name>
+      <display_name>Choose System Availability Schedule.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>*Always On*</default_value>
+      <choices>
+        <choice>
+          <value>{00000000-0000-0000-0000-000000000000}</value>
+          <display_name>*Always On*</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>rated_cc_COP</name>
+      <display_name>Rated Cooling Coil COP</display_name>
+      <type>Double</type>
+      <required>false</required>
+      <model_dependent>false</model_dependent>
+      <default_value>3</default_value>
+    </argument>
+    <argument>
+      <name>heating_coil_type</name>
+      <display_name>Choose the type of heating coil.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>None</default_value>
+      <choices>
+        <choice>
+          <value>None</value>
+          <display_name>None</display_name>
+        </choice>
+        <choice>
+          <value>Gas</value>
+          <display_name>Gas</display_name>
+        </choice>
+        <choice>
+          <value>Electric</value>
+          <display_name>Electric</display_name>
+        </choice>
+        <choice>
+          <value>HotWater</value>
+          <display_name>HotWater</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>rated_hc_gas_efficiency</name>
+      <display_name>Rated Gas Heating Coil Efficiency (0-1.00)</display_name>
+      <type>Double</type>
+      <required>false</required>
+      <model_dependent>false</model_dependent>
+      <default_value>0.8</default_value>
+    </argument>
+    <argument>
+      <name>economizer_type</name>
+      <display_name>Economizer Control Type.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>NoEconomizer</default_value>
+      <choices>
+        <choice>
+          <value>FixedDryBulb</value>
+          <display_name>FixedDryBulb</display_name>
+        </choice>
+        <choice>
+          <value>FixedEnthalpy</value>
+          <display_name>FixedEnthalpy</display_name>
+        </choice>
+        <choice>
+          <value>DifferentialDryBulb</value>
+          <display_name>DifferentialDryBulb</display_name>
+        </choice>
+        <choice>
+          <value>DifferentialEnthalpy</value>
+          <display_name>DifferentialEnthalpy</display_name>
+        </choice>
+        <choice>
+          <value>FixedDewPointAndDryBulb</value>
+          <display_name>FixedDewPointAndDryBulb</display_name>
+        </choice>
+        <choice>
+          <value>NoEconomizer</value>
+          <display_name>NoEconomizer</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>econoMaxDryBulbTemp</name>
+      <display_name>Economizer Maximum Limit Dry-Bulb Temperature (F).</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>69</default_value>
+    </argument>
+    <argument>
+      <name>econoMaxEnthalpy</name>
+      <display_name>Economizer Maximum Enthalpy (Btu/lb).</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>28</default_value>
+    </argument>
+    <argument>
+      <name>econoMaxDewpointTemp</name>
+      <display_name>Economizer Maximum Limit Dewpoint Temperature (F).</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>55</default_value>
+    </argument>
+    <argument>
+      <name>econoMinDryBulbTemp</name>
+      <display_name>Economizer Minimum Limit Dry-Bulb Temperature (F).</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>-100</default_value>
+    </argument>
+    <argument>
+      <name>heat_recovery_type</name>
+      <display_name>Heat Recovery Type.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>None</default_value>
+      <choices>
+        <choice>
+          <value>None</value>
+          <display_name>None</display_name>
+        </choice>
+        <choice>
+          <value>Sensible</value>
+          <display_name>Sensible</display_name>
+        </choice>
+        <choice>
+          <value>Enthalpy</value>
+          <display_name>Enthalpy</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>sens_recovery</name>
+      <display_name>Sensible Heat Recoevery Effectiveness (0-1.0).</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>0.7</default_value>
+    </argument>
+    <argument>
+      <name>lat_recovery</name>
+      <display_name>Latent Heat Recoevery Effectiveness (0-1.0).</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>0.65</default_value>
+    </argument>
+    <argument>
+      <name>dehumidification_control_type</name>
+      <display_name>Dehumidification control Type.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>None</default_value>
+      <choices>
+        <choice>
+          <value>None</value>
+          <display_name>None</display_name>
+        </choice>
+        <choice>
+          <value>CoolReheat</value>
+          <display_name>CoolReheat</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>dehumidification_control_zone</name>
+      <display_name>Choose control Zone for dehumidification.</display_name>
+      <type>Choice</type>
+      <required>false</required>
+      <model_dependent>false</model_dependent>
+      <choices>
+        <choice>
+          <value>{00000000-0000-0000-0000-000000000000}</value>
+          <display_name>Not Used</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>dehumidification_setpoint</name>
+      <display_name>Dehumidification setpoint (percent).</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>60</default_value>
+    </argument>
+    <argument>
+      <name>humidifier_type</name>
+      <display_name>Humidifier Type.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>None</default_value>
+      <choices>
+        <choice>
+          <value>None</value>
+          <display_name>None</display_name>
+        </choice>
+        <choice>
+          <value>ElectricSteam</value>
+          <display_name>ElectricSteam</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>humidifier_control_zone</name>
+      <display_name>Choose control Zone for humidifier.</display_name>
+      <type>Choice</type>
+      <required>false</required>
+      <model_dependent>false</model_dependent>
+      <choices>
+        <choice>
+          <value>{00000000-0000-0000-0000-000000000000}</value>
+          <display_name>Not Used</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>humidifier_setpoint</name>
+      <display_name>humidifier setpoint (percent).</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>30</default_value>
+    </argument>
+  </arguments>
+  <outputs/>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Whole System</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>Model Articulation</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>hvac_template_system_packaged_vav_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>6C468ABA</checksum>
+    </file>
+    <file>
+      <filename>example_model.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>53D14E69</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>2.2.0</identifier>
+        <min_compatible>2.2.0</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>F366E39C</checksum>
+    </file>
+  </files>
+</measure>

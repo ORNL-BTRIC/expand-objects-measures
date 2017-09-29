@@ -1,0 +1,123 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>hvac_template_plant_chilled_water_loop</name>
+  <uid>8689f702-36d5-4abb-b9fd-856a9e1d90a4</uid>
+  <version_id>95f666b7-57b3-4dc4-b5ed-2d3f73705fe1</version_id>
+  <version_modified>20170926T154918Z</version_modified>
+  <xml_checksum>ED947A2B</xml_checksum>
+  <class_name>HVACTemplatePlantChilledWaterLoop</class_name>
+  <display_name>HVACTemplate:Plant:ChilledWaterLoop</display_name>
+  <description>Creat chilled water loop</description>
+  <modeler_description></modeler_description>
+  <arguments>
+    <argument>
+      <name>chw_pump_control</name>
+      <display_name>Choose CHW pump control type.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>intermittent</default_value>
+      <choices>
+        <choice>
+          <value>intermittent</value>
+          <display_name>intermittent</display_name>
+        </choice>
+        <choice>
+          <value>continuous</value>
+          <display_name>continuous</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>chw_design_setpoint</name>
+      <display_name>Chilled water design setpoint in Fahrenheit</display_name>
+      <type>Double</type>
+      <required>false</required>
+      <model_dependent>false</model_dependent>
+      <default_value>44.996</default_value>
+    </argument>
+    <argument>
+      <name>chw_pump_type</name>
+      <display_name>Choose CHW pump type and configuration.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>ConstantPrimaryNoSecondary</default_value>
+      <choices>
+        <choice>
+          <value>ConstantPrimaryNoSecondary</value>
+          <display_name>ConstantPrimaryNoSecondary</display_name>
+        </choice>
+        <choice>
+          <value>ConstantPrimaryVariableSecondary</value>
+          <display_name>ConstantPrimaryVariableSecondary</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>chw_design_deltaT</name>
+      <display_name>Chilled water design deltaT in Fahrenheit</display_name>
+      <type>Double</type>
+      <required>false</required>
+      <model_dependent>false</model_dependent>
+      <default_value>12</default_value>
+    </argument>
+  </arguments>
+  <outputs/>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Distribution</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>Model Articulation</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>hvac_template_plant_chilled_water_loop_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>76F394F5</checksum>
+    </file>
+    <file>
+      <filename>example_model.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>53D14E69</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>2.2.0</identifier>
+        <min_compatible>2.2.0</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>F085C41F</checksum>
+    </file>
+  </files>
+</measure>
